@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorando Django</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --django-green: #092e20;
+            --accent-green: #44b78b;
+            --text-light: #f8f9fa;
+            --bg-dark: #121212;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 700px;
+            padding: 40px;
+            background: #1e1e1e;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border: 1px solid #333;
+        }
+
+        h1 {
+            color: var(--accent-green);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .tagline {
+            font-weight: 300;
+            font-size: 1.1rem;
+            color: #aaa;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: #252525;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-green);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: var(--accent-green);
+            font-size: 1rem;
+        }
+
+        footer {
+            margin-top: 40px;
+            font-size: 0.8rem;
+            color: #666;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Django</h1>
+        <div class="tagline">The Web framework for perfectionists with deadlines</div>
+
+        <p>
+            <strong>Django</strong> es un framework web de alto nivel, basado en <strong>Python</strong>, que fomenta el
+            desarrollo rápido y un diseño limpio y pragmático.
+        </p>
+
+        <p>
+            Fue construido por desarrolladores experimentados para encargarse de gran parte de la configuración del
+            desarrollo web, permitiéndote concentrarte en escribir tu aplicación sin necesidad de reinventar la rueda.
+        </p>
+
+        <div class="features">
+            <div class="card">
+                <h3>Ridículamente rápido</h3>
+                Diseñado para ayudar a los desarrolladores a llevar aplicaciones del concepto a la realidad lo más
+                rápido posible.
+            </div>
+            <div class="card">
+                <h3>Seguro por defecto</h3>
+                Ayuda a evitar errores comunes de seguridad como inyección SQL, XSS y CSRF.
+            </div>
+            <div class="card">
+                <h3>Escalable</h3>
+                Capaz de manejar los picos de tráfico más pesados, desde blogs pequeños hasta redes sociales masivas.
+            </div>
+            <div class="card">
+                <h3>Baterías incluidas</h3>
+                Incluye docenas de extras para autenticación, administración de contenido, mapas y más.
+            </div>
+        </div>
+
+        <footer>
+            Creado con fines informativos • {{ fecha }}
+        </footer>
+    </div>
+
+</body>
+
+</html>
